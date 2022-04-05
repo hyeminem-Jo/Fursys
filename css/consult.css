@@ -1,0 +1,395 @@
+/* Fontawesome CDN-------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main ----------------------------------*/
+main {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+section {
+  width: 1000px;
+  margin: 0 auto;
+  margin: 0 auto;
+}
+
+.service-menu {
+  padding-top: 100px;
+  overflow: hidden;
+}
+
+.service-menu .menu-items {
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  animation: slow-down 0.8s 0.3s;
+  animation-fill-mode: both;
+  transform: translateY(-50px);
+  opacity: 0;
+  border: 1px solid gray;
+}
+
+.service-menu .menu-items a {
+  float: left;
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 15px;
+  transition: 0.2s;
+  border-right: 1px solid gray;
+  line-height: 1.3em;
+}
+
+.service-menu .menu-items a:first-child {
+  background-color: rgb(123, 134, 159);
+  color: white;
+}
+
+.service-menu .menu-items a:last-child {
+  border-right: none;
+}
+
+.service-menu .menu-items a:hover {
+  background-color: rgb(123, 134, 159);
+  color: white;
+}
+
+@keyframes slow-down {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Consulting ----------------------------------*/
+.consulting {
+  margin-bottom: 90px;
+  animation: slow-down 0.8s;
+  animation-fill-mode: both;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.consulting-heading {
+  overflow: hidden;
+}
+
+.consulting-heading .consulting-title {
+  float: left;
+  padding: 40px 0;
+}
+
+.consulting-heading .consulting-title h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.consulting-heading .right {
+  float: right;
+  font-size: 0.8rem;
+  padding: 20px 0;
+  height: 100%;
+  margin-top: 94px;
+}
+
+.consulting-heading .right span {
+  color: crimson;
+}
+
+.consulting form {
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+
+.consulting form strong::before {
+  content: "*";
+  margin-right: 3px;
+  color: crimson;
+}
+
+.consulting form .row {
+  overflow: hidden;
+  border-top: 2px solid rgba(0, 0, 0, 0.323);
+}
+
+.step1 {
+  height: 250px;
+}
+
+.step2 .col3 p {
+  margin-left: 80px;
+}
+
+.step2 .col3 input[type="date"] + label {
+  margin-left: 10px;
+}
+
+.step3 {
+  height: 150px;
+}
+
+.step1 .col3 input {
+  width: 200px;
+}
+
+.step1 .col3 input::placeholder {
+  visibility: visible;
+  transition: 0.3s;
+}
+
+.step1 .col3 input:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.consulting form .row .col1,
+.consulting form .row .col2 {
+  float: left;
+  padding: 20px;
+}
+
+.consulting form .row .col2 textarea {
+  background-color: greenyellow;
+}
+
+.consulting form .row .col3 {
+  padding: 20px;
+  padding-bottom: 60px;
+  padding-top: 10px;
+}
+
+.consulting form .row .col3 strong {
+  width: 100px;
+  display: inline-block;
+}
+
+.consulting form .row .col3 input {
+  margin: 10px 0px;
+  padding: 5px;
+  font-size: 13px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: 0.2s;
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px transparent;
+}
+
+.consulting form .row .col3 input:focus {
+  border: 1px solid dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+
+.consulting form .row .col3 select {
+  border: none;
+  padding: 5px;
+  width: 110px;
+  font-size: 12px;
+}
+
+.consulting form .row .col3 p {
+  margin: 10px 0 20px;
+}
+
+.consulting form .row .col3 p,
+.consulting form .row .col2 p {
+  line-height: 1.4em;
+}
+
+.consulting form .row .col2 p {
+  font-size: 14px;
+}
+
+.consulting .policy iframe {
+  font-size: 12px;
+  border: 1px solid gray;
+  width: 100%;
+  background-color: white;
+}
+
+.consulting form .row .col3 .agree {
+  margin-top: 20px;
+}
+
+.col1 {
+  width: 8%;
+}
+
+.col span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.col2 {
+  width: 20%;
+}
+
+.col3 {
+  background-color: #eee;
+  height: 100%;
+  float: right;
+  width: 72%;
+}
+
+.col3 label {
+  margin-right: 10px;
+}
+
+.col3 .area {
+  margin-left: 102px;
+}
+
+textarea {
+  padding: 15px;
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px transparent;
+  transition: 0.2s;
+  margin: 15px 0;
+}
+
+textarea:focus {
+  border: 1px solid dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+
+textarea:focus::placeholder {
+  opacity: 0;
+}
+
+.submit {
+  overflow: hidden;
+}
+
+.btn-submit {
+  background-color: rgb(32, 33, 52);
+  color: white;
+}
+
+.btn-submit,
+.btn-cancel {
+  display: inline-block;
+  padding: 10px 40px;
+  border: 1px solid black;
+  margin-top: 30px;
+  margin-left: 15px;
+  float: right;
+}
+
+/* Footer ----------------------------------*/
+footer {
+  /* background-color: rgb(32, 33, 52); */
+  background-color: rgba(128, 128, 128, 0.164);
+}
+
+.footer-box {
+  /* color: white; */
+  overflow: hidden;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-box .col {
+  float: left;
+  font-size: 13px;
+  padding: 40px 0 60px;
+  padding-right: 60px;
+}
+
+.footer-box .col:last-child {
+  float: right;
+}
+
+.footer-box .col p,
+.footer-box .col a {
+  line-height: 2.8em;
+}
+
+.footer-box .col a {
+  display: block;
+}
+
+.footer-box .col a {
+  text-decoration: underline;
+}
+
+.footer-box .col span {
+  /* font-weight: 700; */
+  color: orange;
+}
+
+.footer-box .col:nth-child(4) {
+  padding-right: 0;
+}
+
+/* Logo-list ----------------------------------*/
+.logo-list {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.items {
+  width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.logo-items {
+  float: left;
+}
+
+.logo-items img {
+  margin-right: 20px;
+}
+
+.logo-list .right {
+  float: right;
+  overflow: hidden;
+}
+
+.logo-list .right img {
+  margin-right: 10px;
+}
+
+.icon {
+  float: left;
+}
+
+.select-family-site {
+  float: right;
+  padding: 12px 20px;
+  border: none;
+  margin-left: 25px;
+  background-color: rgba(0, 0, 0, 0.767);
+  color: white;
+}
+
+/* Chatbot ----------------------------------*/
+.btn-chatbot {
+  transform: scale(0.2);
+  position: fixed;
+  bottom: -50px;
+  right: -145px;
+}
+
+/* Go-Top ----------------------------------*/
+.btn-top {
+  transform: scale(0.2);
+  position: fixed;
+  bottom: 15px;
+  right: -145px;
+}

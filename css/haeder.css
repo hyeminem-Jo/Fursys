@@ -1,0 +1,232 @@
+/* Header ----------------------------------*/
+header {
+  height: 90px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.829);
+  position: absolute;
+  z-index: 2;
+}
+
+.header-box {
+  position: relative;
+  width: 1200px;
+  margin: auto;
+  height: inherit;
+  z-index: 2;
+}
+
+/* Logo ----------------------------------*/
+.logo {
+  float: left;
+  width: 10%;
+}
+
+.logo a {
+  float: left;
+  width: 100px;
+  height: 40px;
+  margin-right: 40px;
+  margin-top: 22px;
+  background: url(../image/fursys_logo2.png) no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  text-indent: -170px;
+}
+
+/* Nav ----------------------------------*/
+.gnb {
+  width: 70%;
+  float: left;
+  margin-top: 30px;
+  padding-left: 70px;
+}
+
+.gnb>li {
+  float: left;
+  position: relative;
+}
+
+.gnb>li>a {
+  display: block;
+  padding: 10px 16px;
+  position: relative;
+  color: white;
+  transition: 0.2s;
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.gnb>li:hover>a {
+  color: crimson;
+  background-color: white;
+}
+
+.gnb>li>a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background-color: crimson;
+  transition: 0.4s;
+}
+
+.gnb>li:hover>a::after {
+  width: 100%;
+}
+
+/* Submenu ----------------------------------*/
+.gnb-submenu {
+  /* visibility: visible;
+  opacity: 1; */
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  /* width: 160px; */
+  border-top: none;
+  padding-top: 15px;
+  background-color: white;
+  padding-bottom: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.295);
+}
+
+.gnb-submenu li a,
+.submenu-list li a {
+  display: block;
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 5px 15px;
+}
+
+.gnb-submenu li a:hover {
+  color: crimson;
+  transition: 0.2s;
+}
+
+.gnb li:hover .gnb-submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.gnb>li:nth-child(1) {
+  margin-left: 20px;
+}
+
+.gnb li:nth-child(1) .gnb-submenu {
+  padding-top: 20px;
+  width: 600px;
+  padding-bottom: 20px;
+}
+
+.submenu-list {
+  width: 170px;
+  float: left;
+  margin: 0 15px;
+}
+
+.submenu-list li a:hover {
+  color: crimson;
+  transition: 0.2s;
+}
+
+.submenu-list span {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.submenu-list hr {
+  border: none;
+  height: 2px;
+  background-color: gray;
+  width: 80%;
+}
+
+/* Aside ----------------------------------*/
+.aside {
+  float: right;
+  margin-top: 32px;
+  color: rgba(255, 255, 255, 0.534);
+}
+
+.aside a,
+.aside span {
+  float: left;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+
+.aside a:hover {
+  color: white;
+}
+
+/* Finder ----------------------------------*/
+.btn-finder {
+  position: absolute;
+  margin-bottom: 8px;
+  right: 0;
+  top: 100%;
+  padding: 10px 15px 10px 96px;
+  font-size: 14px;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+.fa-search {
+  padding-left: 10px;
+}
+
+.trigger {
+  float: right;
+  height: 22px;
+  width: 40px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+}
+
+.trigger .t1,
+.t2,
+.t3 {
+  position: absolute;
+  height: 2px;
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.trigger .t1 {
+  top: 0;
+}
+
+.trigger .t2 {
+  top: 50%;
+}
+
+.trigger .t3 {
+  top: 100%;
+}
+
+.trigger.click .t1 {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.trigger.click .t2 {
+  opacity: 0;
+}
+
+.trigger.click .t3 {
+  top: 50%;
+  transform: rotate(-45deg);
+}

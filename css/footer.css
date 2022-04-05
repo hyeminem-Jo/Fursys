@@ -1,0 +1,123 @@
+/* Footer ----------------------------------*/
+.footer-box {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-box .row {
+  float: left;
+  font-size: 13px;
+  padding: 40px 0 60px;
+  padding-right: 60px;
+}
+
+.footer-box .row:last-child {
+  float: right;
+}
+
+.footer-box .row p,
+.footer-box .row a {
+  line-height: 2.8em;
+}
+
+.footer-box .row a {
+  display: block;
+}
+
+.footer-box .row a {
+  text-decoration: underline;
+}
+
+.footer-box .row span {
+  color: orange;
+}
+
+.footer-box .row:nth-child(4) {
+  padding-right: 0;
+}
+
+/* Logo-list ----------------------------------*/
+.logo-list {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.logo-list::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background-color: gray;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.items {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.logo-items {
+  float: left;
+}
+
+.logo-items a {
+  color: transparent;
+  display: inline-block;
+  margin-right: 20px;
+  width: 60px;
+  height: 30px;
+  background: url(../image/logo-01-fursys.jpg) no-repeat center;
+  background-size: 100%;
+}
+
+.logo-items a:nth-child(2) {
+  background: url(../image/logo-02-iloom.jpg) no-repeat center;
+  background-size: 100%;
+}
+
+.logo-items a:nth-child(3) {
+  background: url(../image/logo-03-sidiz.jpg) no-repeat center;
+  background-size: 100%;
+}
+
+.logo-items a:nth-child(4) {
+  background: url(../image/logo-04-desker.jpg) no-repeat center;
+  background-size: 100%;
+}
+
+.logo-items a:nth-child(5) {
+  background: url(../image/logo-05-slou.jpg) no-repeat center;
+  background-size: 70%;
+}
+
+.logo-items a:nth-child(6) {
+  background: url(../image/logo-06-alloso.png) no-repeat center;
+  background-size: 100%;
+}
+
+.logo-list .right {
+  float: right;
+  overflow: hidden;
+}
+
+.logo-list .right img {
+  margin-right: 10px;
+}
+
+.icon {
+  float: left;
+}
+
+.select-family-site {
+  float: right;
+  padding: 12px 20px;
+  border: none;
+  margin-left: 25px;
+  background-color: rgba(0, 0, 0, 0.767);
+  color: white;
+}

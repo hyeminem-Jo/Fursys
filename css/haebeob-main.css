@@ -1,0 +1,1055 @@
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Arial', '맑은고딕';
+}
+
+h1,
+h2 {
+    font-family: 'GyeonggiTitleM';
+}
+
+/* Container --------------------------------------------------*/
+.container {
+    overflow: hidden;
+    position: relative;
+    animation: bgc-intro 0.7s;
+    animation-fill-mode: both;
+}
+
+/* Section --------------------------------------------------*/
+section {
+    height: 100vh;
+    /* border: 1px solid #eee; */
+}
+
+/* Trigger --------------------------------------------------*/
+.trigger {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    z-index: 0;
+    /* border: 1px solid blue; */
+}
+
+input[id=trigger] {
+    display: none
+}
+
+label[for=trigger] {
+    margin: 30px 40px;
+    display: block;
+    width: 40px;
+    height: 23px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+label[for=trigger] span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(253, 192, 51);
+    position: absolute;
+    transition: 0.3s;
+}
+
+label[for=trigger] span:nth-child(1) {
+    top: 0;
+}
+
+label[for=trigger] span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+}
+
+label[for=trigger] span:nth-child(3) {
+    top: 100%;
+}
+
+input[id=trigger]:checked~label[for=trigger] span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+input[id=trigger]:checked~label[for=trigger] span:nth-child(2) {
+    opacity: 0;
+}
+
+input[id=trigger]:checked~label[for=trigger] span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+
+/* Trigger --------------------------------------------------*/
+
+/* Trigger-aside --------------------------------------------------*/
+.aside {
+    position: absolute;
+    width: calc(100vw - 220px);
+    opacity: 0;
+    visibility: hidden;
+    height: 100vh;
+    top: 0;
+    left: 20px;
+    transition: 0.2s;
+    /* background-color: rgba(0, 0, 0, 0.863); */
+    background-color: white;
+}
+
+input[id=trigger]:checked~.aside {
+    opacity: 1;
+    visibility: visible;
+}
+
+.trigger .aside .inner {
+    /* border: 1px solid blue; */
+    margin-top: 60px;
+    position: relative;
+    height: calc(100vh - 20px);
+}
+
+.trigger .aside .inner input {
+    display: none;
+}
+
+label[for=site-map] {
+    margin-left: 60px;
+    border-right: 1px solid rgb(173, 172, 172);
+}
+
+label[for=site-map],
+label[for=policy] {
+    font-size: 27px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 30px;
+    color: rgba(0, 0, 0, 0.397);
+}
+
+label[for=site-map]:hover,
+label[for=policy]:hover {
+    color: black;
+}
+
+
+.aside .gnb{
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.aside .gnb .gnb-box {
+    float: left;
+    width: calc(100% / 4);
+    text-align: center;
+}
+
+.aside .gnb .gnb-box a, 
+.aside .gnb .gnb-box span {
+    display: block;
+    padding: 20px;
+    font-size: 18px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.aside .gnb .gnb-box a {
+    border-bottom: 0.5px solid gray;
+    transition: 0.3s;
+}
+
+.aside .gnb .gnb-box a:last-child {
+    border-bottom: 0.5px solid gray;
+}
+
+.aside .gnb .gnb-box a:hover {
+    background-color: rgba(228, 227, 227, 0.521);
+}
+
+.aside .gnb .gnb-box span {
+    border-top: 2.5px solid green;
+    border-bottom: 0.5px solid gray;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.aside .site-map,
+.aside .policy {
+    position: absolute;
+    top: 40px;
+    left: 55px;
+    width: 90%;
+    height: 80%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.aside .policy {
+    padding: 30px 0;
+}
+
+.aside .policy iframe {
+    border-bottom: 1px solid gray;
+    border-top: 3px solid gray;
+    width: 100%;
+    height: 100%;
+    transform: translateX(13px);
+    padding-right: 10px;
+}
+
+input[id=site-map]:checked~label[for=site-map] {
+    color: black;
+}
+
+input[id=policy]:checked~label[for=policy] {
+    color: black;
+}
+
+input[id=site-map]:checked~.site-map {
+    opacity: 1;
+    visibility: visible;
+}
+
+input[id=policy]:checked~.policy {
+    opacity: 1;
+    visibility: visible;
+}
+/* Trigger-aside --------------------------------------------------*/
+
+/* Header --------------------------------------------------*/
+header {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    float: left;
+    animation: intro-02 1s;
+    animation-fill-mode: both;
+    z-index: 1;
+}
+
+header:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 70%;
+    background-color: rgba(34, 34, 34, 0.315);
+    top: 185px;
+    left: 30px;
+}
+
+.h-logo a {
+    display: block;
+    background: url(../image/h-logo.png) no-repeat;
+    height: 40px;
+    width: 170px;
+    margin: 30px;
+    margin-top: 40px;
+    font-size: 0;
+}
+
+header .gnb {
+    margin-top: 105px;
+}
+
+header .gnb>li {
+    position: relative;
+}
+
+header .gnb>li>a {
+    display: block;
+    padding: 20px;
+    padding-left: 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+header .gnb>li:hover>a {
+    background-color: rgb(29, 151, 86);
+    color: white;
+}
+
+header .gnb>li:hover>.sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    border-top: 3px solid rgb(29, 151, 86);
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.192);
+}
+
+.sub-menu a {
+    padding: 15px 20px;
+    display: block;
+}
+
+.sub-menu a:hover {
+    color: rgb(155, 154, 154);
+}
+
+header .gnb>li:last-child>.sub-menu {
+    height: 60px;
+}
+
+.tab-menu {
+    margin-top: 99px;
+}
+
+.tab-menu a {
+    display: block;
+    padding: 15px;
+    padding-left: 50px;
+    position: relative;
+}
+
+.tab-menu a span {
+    display: inline-block;
+    transform: translateX(20px);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.664);
+}
+
+.tab-menu a span:hover {
+    color: black;
+}
+
+.tab-menu a label {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    /* background-color: rgb(211, 210, 210); */
+    background-color: rgb(253, 184, 18);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+}
+
+.tab-menu a:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 77px;
+    background-color: rgb(211, 210, 210);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 47px;
+}
+
+.tab-menu input {
+    /* display: none; */
+}
+
+.tab-menu a input {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: 1px solid;
+    opacity: none;
+}
+
+.tab-menu a input:hover+label {
+    background-color: rgb(211, 210, 210)
+}
+
+.tab-menu a:nth-child(1):before {
+    display: none;
+}
+
+.tab-menu a:nth-child(4):before {
+    display: none;
+}
+
+@keyframes intro-02 {
+    0% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+/* Header --------------------------------------------------*/
+
+/* Main --------------------------------------------------*/
+main {
+    transition: 0.3s;
+}
+
+main .active {
+    transform: translateY(-100vh);
+}
+
+/* Content --------------------------------------------------*/
+.content {
+    float: left;
+    width: 100%;
+    padding-left: 220px;
+    animation: bgc-intro 2s;
+    animation-fill-mode: both;
+}
+
+/* Title --------------------------------------------------*/
+
+.title {
+    position: relative;
+}
+
+.title-bgc {
+    height: calc(100vh - 160px);
+    background: url(../image/h-titile-bgc-01.jpg) no-repeat right center;
+    background-size: cover;
+    background-color: #222;
+}
+
+.title-heading {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 230px;
+    animation: heading-intro 1s;
+    animation-fill-mode: both;
+}
+
+.title-heading h1 {
+    font-size: 40px;
+    line-height: 1.25em;
+}
+
+.title-heading h1 span {
+    color: rgb(0, 166, 80);
+}
+
+.title-heading h1+p {
+    margin-top: 30px;
+    line-height: 1.4em;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.692);
+    z-index: 999;
+}
+
+.title .finder {
+    height: 160px;
+    background-color: rgb(0, 166, 80);
+    padding: 30px;
+    position: relative;
+}
+
+.title .finder span {
+    display: inline-block;
+    padding: 40px;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    padding-right: 30px;
+}
+
+.title .finder input[type=text] {
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.507);
+    transform: translateY(-5px);
+    padding: 7px;
+    width: 70%;
+}
+
+.title .finder .fa-search {
+    color: white;
+    font-size: 24px;
+    transform: translate(-30px, -4px);
+}
+
+.title .finder hr {
+    content: '';
+    position: absolute;
+    border: none;
+    bottom: 60px;
+    left: 270px;
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.title .finder input[type=text]:focus~hr {
+    width: 66.5%;
+}
+
+@keyframes heading-intro {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bgc-intro {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* Title --------------------------------------------------*/
+
+/* About Brand --------------------------------------------------*/
+.about-brand {
+    width: 98%;
+}
+
+.about-heading {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.about-heading hr {
+    border: none;
+    height: 4px;
+    background-color: rgb(253, 184, 18);
+    width: 50px;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+.about-heading h2 {
+    font-size: 38px;
+    padding-bottom: 20px;
+}
+
+.about-heading h2+p {
+    line-height: 1.4em;
+    color: rgba(0, 0, 0, 0.76);
+    font-size: 19px;
+}
+
+.brand {
+    padding-top: 60px;
+}
+
+.brand .items-1 {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -21px;
+}
+
+.brand .items-1 .item-1 {
+    width: calc(100% / 3);
+    height: 260px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    background: url(../image/h-brandimage-big-01.jpeg) no-repeat;
+    background-size: cover;
+    border-right: 7px solid white;
+    font-weight: 600;
+}
+
+.brand .items-1 .item-1:last-child {
+    border-right: none;
+}
+
+.brand .items-1 .item-1:nth-child(2) {
+    background: url(../image/h-brandimage-big-02.png) no-repeat;
+    background-size: cover;
+}
+
+.brand .items-1 .item-1:nth-child(3) {
+    background: url(../image/h-brandimage-big-03.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.brand .items-1 .item-1:hover>span {
+    opacity: 0;
+}
+
+.brand .items-1 .item-1:hover>a {
+    opacity: 1;
+}
+
+.brand .items-1 .item-1 span {
+    position: absolute;
+    content: '스마트해법수학';
+    font-size: 25px;
+    text-align: center;
+    line-height: 275px;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.911), transparent);
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.brand .items-1 .item-1 a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.brand .items-1 .item-1 a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.brand .items-2 {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.brand .items-2 .item-2 {
+    width: calc(100% / 5);
+    height: 230px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    background: url(../image/h-brandimage-small-01.jpg) no-repeat;
+    background-size: cover;
+    border-right: 7px solid white;
+}
+
+.brand .items-2 .item-2:last-child {
+    border-right: none;
+}
+
+.brand .items-2 .item-2:nth-child(2) {
+    background: url(../image/h-brandimage-small-03.jpg);
+    background-size: cover;
+}
+
+.brand .items-2 .item-2:nth-child(3) {
+    background: url(../image/h-brandimage-small-02.png);
+    background-size: cover;
+}
+
+.brand .items-2 .item-2:nth-child(4) {
+    background: url(../image/h-brandimage-small-04.jpg);
+    background-size: cover;
+}
+
+.brand .items-2 .item-2:nth-child(5) {
+    background: url(../image/h-brandimage-small-05.jpeg);
+    background-size: cover;
+}
+
+.brand .items-2 .item-2 a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.brand .items-2 .item-2:hover a {
+    opacity: 1;
+}
+
+.brand .items-2 .item-2 a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.brand .items-2 .item-2 span {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    line-height: 260px;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.911), transparent);
+    font-weight: 600;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.brand .items-2 .item-2:hover>span {
+    opacity: 0;
+}
+
+.brand .items-1 .item-1 span,
+.brand .items-2 .item-2 span {
+    font-family: 'GyeonggiTitleM';
+    font-style: normal;
+    font-weight: 500;
+}
+/* About Brand --------------------------------------------------*/
+
+/* Brand Value --------------------------------------------------*/
+.brand-value {
+    background: url(../image/h-measure-bgc.jpg) no-repeat left center;
+    background-size: cover;
+    position: relative;
+    padding-top: 120px;
+}
+
+.brand-value hr {
+    border: none;
+    height: 4px;
+    background-color: rgb(253, 184, 18);
+    width: 50px;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+.brand-value h2 {
+    font-size: 38px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.brand-value .info-items {
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    width: 100%;
+}
+
+.brand-value .info-items .info-item {
+    float: left;
+    width: calc(100% / 4);
+    border-right: 1px solid;
+    height: 400px;
+    text-align: center;
+    padding: 30px;
+}
+
+.brand-value .info-items .info-item:last-child {
+    border-right: none;
+}
+
+.brand-value .info-items .info-item img {
+    margin-bottom: 30px;
+    width: 150px;
+}
+
+.brand-value .info-items .info-item p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3em;
+}
+/* Brand Value --------------------------------------------------*/
+
+/* Brand Story --------------------------------------------------*/
+
+.story-heading {
+    text-align: center;
+    padding-top: 50px;
+    width: 98%;
+}
+
+.story-heading hr {
+    border: none;
+    height: 4px;
+    background-color: rgb(253, 184, 18);
+    width: 50px;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+.story-heading h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.story-heading h2+p {
+    line-height: 1.4em;
+    color: rgba(0, 0, 0, 0.76);
+    font-size: 19px;
+}
+
+.story-items {
+    width: 98%;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.story-items .left {
+    float: left;
+    width: 68%;
+}
+
+.story-item1,
+.story-item2 {
+    height: 250px;
+}
+
+.story-item1 {
+    margin-bottom: 15px;
+    background: url(../image/h-story-image-01.jpeg);
+    background-size: cover;
+}
+
+.story-item2 {
+    background: url(../image/h-story-image-02.jpeg) no-repeat center -190px;
+    background-size: cover;
+}
+
+.story-item3 {
+    float: right;
+    padding-left: 30px;
+    width: 31%;
+    height: 517px;
+    background: url(../image/h-story-image-03.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.story-items .content {
+    position: relative;
+}
+
+
+.story-items .content a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    padding-top: 50px;
+}
+
+.story-items .content .btn {
+    display: inline-block;
+    background-color: rgb(0, 166, 80);
+    padding: 5px 15px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.story-items .content h3 {
+    font-size: 28px;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+
+.story-items .content .view {
+    margin-top: 15px;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.507);
+    padding-top: 25px;
+}
+
+.story-items .content:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(211, 210, 210), transparent);
+    transition: 0.3s;
+}
+
+.story-items .story-item3:before {
+    background: linear-gradient(-180deg, rgb(211, 210, 210), transparent);
+    width: 100%;
+}
+
+.story-items .content:hover:before {
+    background: linear-gradient(90deg, rgba(26, 26, 26, 0.808), transparent);
+}
+
+.story-items .story-item3:hover:before {
+    background: linear-gradient(-180deg, rgba(26, 26, 26, 0.788), transparent);
+}
+
+.story-items .content:hover>a,
+.story-items .content:hover>a h3,
+.story-items .content:hover>a span {
+    color: white;
+}
+/* Brand Story --------------------------------------------------*/
+
+/* Quick --------------------------------------------------*/
+.quick {
+    margin-top: 80px;
+    height: 230px;
+    overflow: hidden;
+}
+
+.q-item {
+    float: left;
+    height: 100%;
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding-top: 50px;
+    background-color: rgba(238, 238, 238, 0.815);
+    position: relative;
+}
+
+.q-item:nth-child(1) {
+    width: 28%;
+}
+
+.q-item:nth-child(1):after,
+.q-item:nth-child(2):after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: rgba(51, 50, 50, 0.479);
+    height: 70%;
+    top: 15%;
+    left: 99%;
+}
+
+.q-item:nth-child(2) {
+    width: 32%;
+}
+
+.q-item:nth-child(3) {
+    width: 40%;
+}
+
+.q-item .fas {
+    float: left;
+    color: black;
+    font-size: 60px;
+    border: 1.5px solid rgba(0, 0, 0, 0.178);
+    padding: 30px;
+    border-radius: 50%;
+    transition: 0.2s;
+    color: gray;
+    margin-left: 30px;
+    background-color: white;
+}
+
+.q-item .desc {
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: rgb(116, 115, 115);
+}
+
+.q-item .desc p {
+    line-height: 1.2em;
+}
+
+.q-item .desc h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.q-item:hover>.fas {
+    background-color: rgb(0, 166, 80);
+    color: white;
+    border: 1.5px solid transparent;
+}
+
+/* Quick --------------------------------------------------*/
+
+/* footer --------------------------------------------------*/
+
+footer {
+    height: 320px;
+    padding-top: 45px;
+    background-color: rgba(0, 0, 0, 0.733);
+    color: white;
+}
+
+footer .top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.479);
+    padding-bottom: 25px;
+    margin-left: 25px;
+    width: 95%;
+}
+
+footer .top a {
+    margin-left: 20px ;
+}
+
+footer .top a span {
+    font-weight: 800;
+}
+
+footer .bottom {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+footer .bottom .left {
+    float: left;
+    margin-left: 25px;
+}
+
+footer .bottom .left span {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+footer .bottom .left span:last-child {
+    margin-top: 40px;
+    opacity: 0.5;
+}
+
+footer .bottom .right {
+    float: right;
+    margin-right: 40px;
+    width: 200px;
+    height: 100px;
+    background: url(../image/h-logo-footer.png) no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    font-size: 0;
+    margin-top: 100px;
+}
+
+/* footer --------------------------------------------------*/
+

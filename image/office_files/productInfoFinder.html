@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<meta name="Publisher" content="퍼시스">
+<meta name="reply-to" content="mail@fursys.com">
+<meta name="Keywords" content="fursys">
+<title>FURSYS</title>
+
+<script type="text/javascript" src="./jquery-1.6.1.min.js"></script>
+<!-- <script type="text/javascript" src="/fur_frt/common/js/jqBarGraph.js"></script> -->
+<script type="text/javascript" src="./common.js"></script>
+<script type="text/javascript" src="./common_fnc.js"></script>
+<script type="text/javascript" src="./index.banner.js"></script>
+<script type="text/javascript" src="./jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="./jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="./script.js"></script>
+<script type="text/javascript" src="./string.js"></script>
+<script type="text/javascript" src="./jquery.validate.js"></script>
+<script type="text/javascript" src="./jquery.ui.core.js"></script>
+<script type="text/javascript" src="./jquery.ui.widget.js"></script>
+<script type="text/javascript" src="./jquery.ui.position.js"></script>
+<script type="text/javascript" src="./jquery.ui.autocomplete.js"></script>
+
+<link href="./style.css" rel="stylesheet" type="text/css">
+<link href="./jquery.ui.all.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+	.ui-autocomplete {
+		max-height: 200px;
+		max-width: 500px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 20px;
+	}
+
+	* html .ui-autocomplete {
+		width: 500px;
+		height: 100px;
+	}
+	</style>
+</head>
+<body>
+<form method="post" id="frmProductInfo" name="frmProductInfo" onsubmit="return submitSearchProduct();">
+<input type="hidden" name="keyParam">
+<input type="hidden" name="productId">
+<input type="hidden" name="pfCategory1" value="PD_0001">
+<input type="hidden" name="pfCategory2" value="">
+<input type="hidden" name="pfId" value="">
+
+	<input type="hidden" name="page" value="1">
+
+
+
+	<input type="hidden" name="sortField" value="c_product_sort">
+	<input type="hidden" name="sortWord" value="ASC">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- 제품파인더 box -->
+			<div class="product_search_box">
+				<!-- 상단 -->
+				<div class="product_search_inner">
+					<div style="border-left: 1px solid #ccc;">
+						<!-- 오피스/헬스케어 -->
+						<span class="header_search"><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001"><img src="./text_office2_on.jpg" alt="오피스"></a><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0002"><img src="./text_healthcare2.jpg" alt="헬스케어"></a><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0185"><img src="./text_lab2.jpg" alt="랩"></a></span>
+						<!-- //오피스/헬스케어 -->
+						<!-- 검색 카운트 -->
+						<span class="header_cnt"> 오피스 전체<span><br>전체검색 <strong>139</strong> 건</span> </span>
+						<!-- 검색 카운트 -->
+					</div>
+					<div class="search_ar">
+						<img src="./text_search.jpg" alt="제품명으로 검색">
+						<input type="text" style="width: 287px;" id="searchWord" name="searchWord" value="" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+						<input type="image" src="./bl_search.jpg" alt="검색버튼">
+					</div>
+				</div>
+				<!-- //상단 -->
+				<!-- 상품 네비게이션 / 리스트 -->
+				<div style="background: #fff;min-height:432px;">
+				
+					<!-- 12.03.23 수정 : ie7에서 오류로인해서 위치이동 -->
+					<span class="finderAutoBox"><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul></span>
+					<!-- //12.03.23 수정 : ie7에서 오류로인해서 위치이동 -->
+					
+					<div class="search_result">
+						<!-- 네비게이션 -->
+						<div class="nav">
+							<ul>
+
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001" class="on">전체<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0003">데스크 &amp; 패널<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0004">프리미어 클래스<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0006">중역용의자<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0007">사무용의자<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0008">회의용의자<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0009">로비의자<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0005">회의&amp;강의 시스템<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0010">소파<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0011">소파테이블<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0168">도서관&amp;기숙사<span></span></a></li>
+								<li><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&amp;pfCategory2=PD_0012">액세서리<span></span></a></li>
+
+
+
+							</ul>
+						</div>
+
+
+						<!-- //네비게이션 -->
+
+						<!-- 상품 리스트 -->
+						<div class="search_list">
+		
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0222" target="_parent">
+								
+									
+									
+										모션데스크
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0222" target="_parent">
+								
+									
+									
+										MOTION DESK series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0222" target="_parent">
+													<img src="./5a7e22ca-5e33-4edf-b35d-8d63cae08fd6.jpg" alt="5a7e22ca-5e33-4edf-b35d-8d63cae08fd6.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0235" target="_parent">
+								
+									
+									
+										인에이블
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0235" target="_parent">
+								
+									
+									
+										enAble series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0235" target="_parent">
+													<img src="./0c30f1a1-8edf-4f5f-93ee-f1945bb427a3.jpg" alt="0c30f1a1-8edf-4f5f-93ee-f1945bb427a3.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0020" target="_parent">
+								
+									
+									
+										에프엑스원
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0020" target="_parent">
+								
+									
+									
+										FX-1 DESK series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0020" target="_parent">
+													<img src="./a51c47e5-26d9-4f74-bd44-afa16215463a.jpg" alt="a51c47e5-26d9-4f74-bd44-afa16215463a.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0019" target="_parent">
+								
+									
+									
+										엑스페이스
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0019" target="_parent">
+								
+									
+									
+										EXPACE series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0019" target="_parent">
+													<img src="./7767e23b-bd3b-44b6-9554-3c38d6a727a2.jpg" alt="7767e23b-bd3b-44b6-9554-3c38d6a727a2.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0213" target="_parent">
+								
+									
+									
+										챈스
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0213" target="_parent">
+								
+									
+									
+										CHANCE series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0213" target="_parent">
+													<img src="./3112a6c6-1be4-4c20-85d4-bb0969bb7b2a.jpg" alt="3112a6c6-1be4-4c20-85d4-bb0969bb7b2a.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0240" target="_parent">
+								
+									
+									
+										딜라이트
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0240" target="_parent">
+								
+									
+									
+										DELIGHT DESK series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0240" target="_parent">
+													<img src="./78449c9a-c351-4763-a392-573391785a06.jpg" alt="78449c9a-c351-4763-a392-573391785a06.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0022" target="_parent">
+								
+									
+									
+										퍼즐플러스
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0022" target="_parent">
+								
+									
+									
+										PUZZLE PLUS series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0022" target="_parent">
+													<img src="./5b7d9821-e4b1-4836-bf7d-ccafb998779d.jpg" alt="5b7d9821-e4b1-4836-bf7d-ccafb998779d.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0023" target="_parent">
+								
+									
+									
+										수퍼테크
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0023" target="_parent">
+								
+									
+									
+										SUPERTECH series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0023" target="_parent">
+													<img src="./2274aa2f-c6af-49ef-877b-7a31891ea796.jpg" alt="2274aa2f-c6af-49ef-877b-7a31891ea796.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0236" target="_parent">
+								
+									
+									
+										인라이트(패널)
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0236" target="_parent">
+								
+									
+									
+										enLite PANEL series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0236" target="_parent">
+													<img src="./93b83ddd-72b5-4d5c-8824-e0b9ccf5eb7f.jpg" alt="93b83ddd-72b5-4d5c-8824-e0b9ccf5eb7f.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+
+							<div class="a_box"> 
+								<p class="title">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0021" target="_parent">
+								
+									
+									
+										에프엑스원(패널)
+									
+								
+								</a>
+								<br><span class="ubTitle">
+								<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0021" target="_parent">
+								
+									
+									
+										FX-I PANEL series
+									
+								
+								</a>
+								</span></p>
+								<div class="box_type">
+									<div class="cell">
+										<div class="inner">
+											<p style="margin-left: 10px">
+												<a href="https://www.fursys.com/fur_frt/productInfo/productInfoView.do?productId=PD_0021" target="_parent">
+													<img src="./8c548d8d-1192-4c79-9ef8-2aa96fe7161f.jpg" alt="8c548d8d-1192-4c79-9ef8-2aa96fe7161f.jpg" style="width:121px;height:121px;">
+												</a>
+											</p>
+										</div>
+									</div>
+								<div class="cell_hover"></div></div> 
+							</div> 
+
+		
+		
+
+							<!-- 페이징 -->
+							<div class="paginate"><a href="https://www.fursys.com/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001#none" class="pre"><img src="./btn_pre2.png" height="20px" width="18px" alt="이전"></a><strong class="frst"><font color="#000000">1</font></strong><a href="javascript:fncGoPage(&#39;2&#39;);">2</a><a href="javascript:fncGoPage(&#39;3&#39;);">3</a><a href="javascript:fncGoPage(&#39;4&#39;);">4</a><a href="javascript:fncGoPage(&#39;5&#39;);">5</a><a href="javascript:fncGoPage(&#39;6&#39;);">6</a><a href="javascript:fncGoPage(&#39;7&#39;);">7</a><a href="javascript:fncGoPage(&#39;8&#39;);">8</a><a href="javascript:fncGoPage(&#39;9&#39;);">9</a><a href="javascript:fncGoPage(&#39;10&#39;);">10</a><a href="javascript:fncGoPage(&#39;2&#39;);" class="next"><img src="./btn_next2_on.png" height="20px" width="18px" alt="다음"></a></div>
+							<!-- //페이징 -->
+						</div>
+						<!-- //상품 리스트 -->
+
+					</div>
+
+				</div>
+				<!-- //상품 네비게이션 / 리스트 -->
+			</div>
+			<!-- //제품파인더 box -->
+</form>
+
+<script type="text/javascript">
+
+	$(window).ready(function(){
+		
+		if("" != ""){
+			$("#searchWord").val("");
+		}
+		
+		$("#searchWord").autocomplete({
+			appendTo: ".finderAutoBox",
+			source: function( request, response ) {
+				var productSearch = request.term;
+				if(productSearch!="") {				
+					$.ajax({
+						url: '/fur_frt/product/productData.do',
+						type: 'POST',
+						dataType: 'json',	
+						data: 'searchWord='+request.term,		
+						success: function( data ) {
+							response( $.map( data.productList, function( item ) {
+								return {
+									label: item.productTitle + ' : ' + item.productAlt,
+									value: item.productTitle + ' : ' + item.productAlt,
+									desc: item.productId
+								}
+							}));
+						}
+					});
+				}
+			},
+			minLength: 1,
+			select: function( event, ui ) {
+			},
+			open: function() {
+				$( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+			},
+			close: function() {
+				$( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+			}
+		});
+		
+	});
+
+	function submitSearchProduct() {
+
+		var frm = document.frmProductInfo;
+		var searchWord = frm.elements["searchWord"].value.trim();
+		
+		/*
+		if(searchWord!="" && !searchWord.isKorEngNum(" &'()-")) {
+			alert("한글, 숫자, 영문만 입력하세요.");
+			return;
+		}
+		*/
+
+		frm.elements["keyParam"].value = "productInfoFinder";
+		frm.elements["page"].value = "1";
+		//frm.elements["searchWord"].value = searchWord;
+		frm.target = "_self";
+		
+		frm.action = "/fur_frt/productInfo/productInfoFinder.do?searchWord="+searchWord; 
+
+		frm.submit();
+	}
+
+	function fncGoPage(nPage){
+		var frm	= document.frmProductInfo;
+		frm.elements["keyParam"].value = "productInfoFinder";
+		frm.elements["page"].value	= nPage;
+		frm.target = "_self";
+		frm.action = "/fur_frt/productInfo/productInfoFinder.do?pfCategory1=PD_0001&pfCategory2=&pfId=&searchWord=&page=" + nPage; 
+		frm.submit();
+	}
+
+</script>
+
+
+</body></html>

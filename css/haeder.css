@@ -80,15 +80,14 @@ header {
 
 /* Submenu ----------------------------------*/
 .gnb-submenu {
-  /* visibility: visible;
-  opacity: 1; */
   visibility: hidden;
   opacity: 0;
+  /* visibility: visible;
+  opacity: 1; */
   transition: 0.2s;
   position: absolute;
   top: 35px;
   left: 0;
-  /* width: 160px; */
   border-top: none;
   padding-top: 15px;
   background-color: white;
@@ -96,20 +95,20 @@ header {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.295);
 }
 
-.gnb-submenu li a,
-.submenu-list li a {
+.gnb-submenu .gnb-submenu-item a,
+.submenu-list .submenu-list-item a {
   display: block;
   white-space: nowrap;
   font-size: 14px;
   padding: 5px 15px;
 }
 
-.gnb-submenu li a:hover {
+.gnb-submenu .gnb-submenu-item a:hover {
   color: crimson;
   transition: 0.2s;
 }
 
-.gnb li:hover .gnb-submenu {
+.gnb .gnb-item:hover .gnb-submenu {
   visibility: visible;
   opacity: 1;
 }
@@ -120,7 +119,7 @@ header {
 
 .gnb li:nth-child(1) .gnb-submenu {
   padding-top: 20px;
-  width: 600px;
+  min-width: 600px;
   padding-bottom: 20px;
 }
 
@@ -130,7 +129,7 @@ header {
   margin: 0 15px;
 }
 
-.submenu-list li a:hover {
+.submenu-list .submenu-list-item a:hover {
   color: crimson;
   transition: 0.2s;
 }

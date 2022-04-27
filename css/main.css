@@ -856,45 +856,39 @@ main::before {
 	position: fixed;
 	bottom: 250px;
 	right: 30px;
-	overflow: hidden;
 	height: 250px;
+	overflow: hidden;
 	box-shadow: 0 5px 7px rgba(0, 0, 0, 0.467);
 	border-radius: 10px 0 0 10px;
 }
 
-.quick-menu input {
-	display: none;
-}
-
-.quick-menu input:checked~ul {
-	display: block;
-}
-
-.quick-menu label {
+.quick-menu .quick-menu-btn {
 	float: right;
-	background-color: rgb(68, 68, 68);
 	background-color: rgb(218, 44, 78);
 	width: 40px;
 	height: 100%;
 	position: relative;
 }
 
-.quick-menu label span {
+.quick-menu .quick-menu-btn span {
 	display: block;
-	font-weight: 600;
 	transform-origin: 100% 100%;
 	transform: rotate(-90deg) translateX(40px);
 	position: absolute;
+	top: 0;
 	right: 0;
-	color: white;
 	width: 250px;
 	height: 40px;
+	color: white;
+	font-size: 17px;
+	font-weight: 600;
+	letter-spacing: 1px;
 	line-height: 38px;
 	text-align: center;
 	cursor: pointer
 }
 
-.quick-menu ul {
+.quick-menu .list {
 	padding-top: 8px;
 	height: 100%;
 	width: 150px;
@@ -903,7 +897,11 @@ main::before {
 	display: none;
 }
 
-.quick-menu ul li a {
+.quick-menu .list.is-open {
+	display: block;
+}
+
+.quick-menu .item a {
 	display: block;
 	font-size: 14px;
 	padding: 4px;
@@ -911,7 +909,7 @@ main::before {
 	font-weight: 600;
 }
 
-.quick-menu ul li a:hover {
+.quick-menu .item a:hover {
 	color: gray;
 }
 

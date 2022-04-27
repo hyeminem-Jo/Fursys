@@ -13,6 +13,11 @@ $('.btn-top').click(function () {
   $('html, body').stop().animate({scrollTop: 0}, 1000)
 })
 
+// 퀵 메뉴 열기
+$('.quick-menu-btn').click(function() {
+  $(this).siblings().toggleClass('is-open')
+})
+
 // 서브페이지에 header, footer 연결
 $('.header-include').load('header.html')
 $('.footer-include').load('footer.html')

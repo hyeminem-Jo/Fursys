@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FURSYS</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/haeder.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/mediaquery.css">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -199,23 +197,23 @@
           <p>퍼시스의 주요 납품사례를 확인하세요</p>
           <button class="more">view more ></button>
         </div>
-        <ul class="p-items">
-          <li class="p-item">
+        <ul class="portfolio-list">
+          <li class="portfolio-item">
             <a href="#none"><span>판토스</spa></a>
           </li>
-          <li class="p-item">
+          <li class="portfolio-item">
             <a href="#none"><span>화승네트웍스</spa></a>
           </li>
-          <li class="p-item">
+          <li class="portfolio-item">
             <a href="#none"><span>푸르덴셜 생명보험</spa></a>
           </li>
-          <li class="p-item">
+          <li class="portfolio-item">
             <a href="#none"><span>동부건설</spa></a>
           </li>
-          <li class="p-item">
+          <li class="portfolio-item">
             <a href="#none"><span>KT지사</spa></a>
           </li>
-          <li class="p-item">
+          <li class="portfolio-item">
             <a href="#none"><span>이비즈타운</spa></a>
           </li>
         </ul>
@@ -226,120 +224,110 @@
             <h2>SHOWROOM</h2>
             <p>퍼시스의 제품을 가장 가까이서 만나보세요.</p>
           </div>
-          <input type="radio" name="tab-menu" id="tab1" checked>
-          <input type="radio" name="tab-menu" id="tab2">
-          <input type="radio" name="tab-menu" id="tab3">
-          <input type="radio" name="tab-menu" id="tab4">
-          <input type="radio" name="tab-menu" id="tab5">
-          <input type="radio" name="tab-menu" id="tab6">
-          <div class="showroom-btn">
-            <label for="tab1">서울 본사쇼룸</label>
-            <label for="tab2">광화문센터</label>
-            <label for="tab3">부산센터</label>
-            <label for="tab4">대구센터</label>
-            <label for="tab5">대전센터</label>
-            <label for="tab6">광주센터</label>
-            <a href="#none" class="go">쇼룸 전체보기</a>
-          </div>
-          <article class="showroom-box">
-            <div class="content slide1">
-              <a href="#1">
-                <img src="./image/showroom-01.jpg" alt="서울 본사쇼룸">
-              </a>
-            </div>
-            <div class="content slide2">
-              <a href="#2">
-                <img src="./image/showroom-02.jpg" alt="광화문센터">
-              </a>
-            </div>
-            <div class="content slide3">
-              <a href="#3">
-                <img src="./image/showroom-03.jpg" alt="부산센터">
-              </a>
-            </div>
-            <div class="content slide4">
-              <a href="#4">
-                <img src="./image/showroom-04.jpg" alt="대구센터">
-              </a>
-            </div>
-            <div class="content slide5">
-              <a href="#5">
-                <img src="./image/showroom-05.jpg" alt="대전센터">
-              </a>
-            </div>
-            <div class="content slide6">
-              <a href="#6">
-                <img src="./image/showroom-06.jpg" alt="광주센터">
-              </a>
-            </div>
+          <ul class="showroom-btn">
+            <li class="btn is-active" data-alt="tab1">서울 본사쇼룸</li>
+            <li class="btn" data-alt="tab2">광화문센터</li>
+            <li class="btn" data-alt="tab3">부산센터</li>
+            <li class="btn" data-alt="tab4">대구센터</li>
+            <li class="btn" data-alt="tab5">대전센터</li>
+            <li class="btn" data-alt="tab6">광주센터</li>
+            <a href="#none">쇼룸 전체보기</a>
+          </ul>
+          <article class="showroom-tabs">
+            <ul class="tab-list">
+              <li class="tab is-active" id="tab1">
+                <a href="#none" title="서울 본사쇼룸 바로가기">
+                  <img src="./image/showroom-01.jpg" alt="서울 본사쇼룸">
+                </a>
+              </li>
+              <li class="tab" id="tab2">
+                <a href="#none" title="광화문센터 바로가기">
+                  <img src="./image/showroom-02.jpg" alt="광화문센터">
+                </a>
+              </li>
+              <li class="tab" id="tab3">
+                <a href="#none" title="부산센터 바로가기">
+                  <img src="./image/showroom-03.jpg" alt="부산센터">
+                </a>
+              </li>
+              <li class="tab" id="tab4">
+                <a href="#none" title="대구센터 바로가기">
+                  <img src="./image/showroom-04.jpg" alt="대구센터">
+                </a>
+              </li>
+              <li class="tab" id="tab5">
+                <a href="#none" title="대전센터 바로가기">
+                  <img src="./image/showroom-05.jpg" alt="대전센터">
+                </a>
+              </li>
+              <li class="tab" id="tab6">
+                <a href="#none" title="광주센터 바로가기">
+                  <img src="./image/showroom-06.jpg" alt="광주센터">
+                </a>
+              </li>
+            </ul>
           </article>
         </div>
       </section>
       <section class="case-study">
-        <div class="c-heading">
+        <div class="case-heading">
           <h2>CASE STUDY</h2>
           <p>퍼시스와 함께한 공간 이야기</p>
           <button class="c-more">view more ></button>
         </div>
-        <article class="c-items">
-          <div class="c-item">
-            <a href="#none">
-              <img src="./image/case-study-logo-01.png" alt="한국쓰리엠 로고" width="80px">
-            </a>
-            <div class="desc">
-              <h3>한국쓰리엠</h3>
-              <p>자율성과 유연성을 지원하는 오피스</p>
-            </div>
-          </div>
-          <div class="c-item">
-            <a href="#none">
-              <img src="./image/case-study-logo-02.png" alt="카카오게임즈 로고" width="120px">
-            </a>
+        <ul class="case-list">
+          <li class="case-item">
+            <a href="#none" title="한국쓰리엠 바로가기"></a>
+              <div class="desc">
+                <h3>한국쓰리엠</h3>
+                <p>자율성과 유연성을 지원하는 오피스</p>
+              </div>
+          </li>
+          <li class="case-item">
+            <a href="#none" title="카카오프렌즈 바로가기"></a>
             <div class="desc">
               <h3>카카오게임즈</h3>
               <p>일상이 게임이 되는 곳</p>
             </div>
-          </div>
-          <div class="c-item">
-            <a href="#none">
-              <img src="./image/case-study-logo-03.png" alt="유니언워크 로고" width="160px">
-            </a>
-            <div class="desc">
-              <h3>유니언워크</h3>
-              <p>밀레니얼 세대가 모여 일하는 새로운 공간</p>
-            </div>
-          </div>
-        </article>
+          </li>
+          <li class="case-item">
+            <a href="#none" title="유니언워크 바로가기"></a>
+              <div class="desc">
+                <h3>유니언워크</h3>
+                <p>밀레니얼 세대가 모여 일하는 새로운 공간</p>
+              </div>
+          </li>
+        </ul>
       </section>
       <section class="news">
-        <div class="n-heading">
+        <div class="news-heading">
           <h2>NEWS</h2>
           <p>퍼시스의 새로운 소식들</p>
-          <button class="n-more">view more ></button>
+          <button class="news-more">view more ></button>
         </div>
         <article>
-          <div class="news-box">
-            <div class="n-item">
+          <ul class="news-list">
+            <li class="news-item">
               <h4>공지사항</h4>
               <a href="#none">[공지] 퍼시스 개인정보처리방침 개정 안내</a>
               <span>2020-12-11</span>
-            </div>
-            <div class="n-item">
+            </li>
+            <div class="news-item">
               <h4>공지사항</h4>
               <a href="#none">[공지] 퍼시스 개인정보처리방침 개정 안내 </a>
               <span>2020-11-05</span>
             </div>
-            <div class="n-item">
+            <div class="news-item">
               <h4>퍼시스활동</h4>
               <a href="#none">퍼시스, 부산센터 쇼룸에 친환경 ‘나아바 그린월’ 공간 조성 </a>
               <span>2020-09-17</span>
             </div>
-            <div class="n-item">
+            <div class="news-item">
               <h4>퍼시스활동</h4>
               <a href="#none">퍼시스, 밀레니얼 워킹라이프스타일 다룬 사무환경 전문 매거진 ‘오피스 위 러브(Offic .. </a>
               <span>2020-09-17</span>
             </div>
-          </div>
+          </ul>
         </article>
       </section>
       <section class="blog">
@@ -436,7 +424,8 @@
   </div>
   
   <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./js/jquery-3.6.0.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

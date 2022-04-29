@@ -129,11 +129,33 @@
   <!--Title -->
   <div class="content">
     <section class="title">
-      <div class="title-heading">
-        <h2><span>BRANDSTORY</span></h2>
-        <h3><span>사무환경 프로젝트<br>#4 퍼시스 본사</span></h3>
-        <a href="#none">자세히 알아보기</a>
+      <div class="controls">
+        <button class="btn-prev" type="button">prev</button>
+        <button class="btn-next" type="button">next</button>
       </div>
+      <ul class="title-content-list">
+        <li class="title-content slide1">
+          <div class="title-heading">
+            <h2><span class="is-active">BRAND STORY</span></h2>
+            <h3><span class="is-active">사무환경 프로젝트<br>#1 퍼시스 본사</span></h3>
+            <a class="is-active" href="#none" title="사무환경 프로젝트 바로가기">자세히 알아보기</a>
+          </div>
+        </li>
+        <li class="title-content slide2">
+          <div class="title-heading">
+            <h2><span>FURSYS OFFICE</span></h2>
+            <h3><span>공간 프로젝트<br>#2 퍼시스 스튜디오</span></h3>
+            <a href="#none" title="공간 프로젝트 바로가기">자세히 알아보기</a>
+          </div>
+        </li>
+        <li class="title-content slide3">
+          <div class="title-heading">
+            <h2><span>FURSYS PRODUCT</span></h2>
+            <h3><span>프로덕트 에디션<br>#3 퍼시스 제품</span></h3>
+            <a href="#none" title="프로덕트 에디션 바로가기">자세히 알아보기</a>
+          </div>
+        </li>
+      </ul>
     </section>
     <!--Main content-->
     <main>
@@ -142,7 +164,7 @@
         <p>퍼시스의 다양한 소식들을 만나보세요</p>
         <ul class="issues-items">
           <li>
-            <a href="#none">
+            <a href="#none" title="사무환경 컨설팅 바로가기">
               <div class="card-image"></div>
               <div class="card-desc">
                 <h3>사무환경 컨설팅</h3>
@@ -155,7 +177,7 @@
             </a href="#none">
           </li>
           <li>
-            <a href="#none">
+            <a href="#none" title="NEW PRODUCT 바로가기">
               <div class="card-image"></div>
               <div class="card-desc">
                 <h3>NEW PRODUCT</h3>
@@ -168,7 +190,7 @@
             </a href="#none">
           </li>
           <li>
-            <a href="#none">
+            <a href="#none" title="AWARDS 바로가기">
               <div class="card-image"></div>
               <div class="card-desc">
                 <h3>AWARDS</h3>
@@ -187,7 +209,7 @@
           <div class="desc">
             <h2>OFFICE WE LOVE</h2>
             <p>Vol.6 '밀레니엄 세대의 워킹라이프 스타일과 사무환경 발간</p>
-            <a href="#none">자세히 보러가기 ></a>
+            <a href="#none">자세히 보러가기 &#62;</a>
           </div>
         </article>
       </section>
@@ -195,7 +217,7 @@
         <div class="portfolio-header">
           <h2>PORTFOLIO</h2>
           <p>퍼시스의 주요 납품사례를 확인하세요</p>
-          <button class="more" type="button">view more ></button>
+          <button class="more" type="button">view more &#62;</button>
         </div>
         <ul class="portfolio-list">
           <li class="portfolio-item">
@@ -273,7 +295,7 @@
         <div class="case-heading">
           <h2>CASE STUDY</h2>
           <p>퍼시스와 함께한 공간 이야기</p>
-          <button class="c-more" type="button">view more ></button>
+          <button class="c-more" type="button">view more &#62;</button>
         </div>
         <ul class="case-list">
           <li class="case-item">
@@ -401,7 +423,7 @@
   </footer>
 
   <!-- Quick-buttons -->
-  <div class="quick-btns">
+  <div class="quick-btns is-hide">
     <div class="btn-top">
       <a href="#none"><img src="./image/go-top-02.png" alt="맨위로"></a>
     </div>
@@ -410,7 +432,7 @@
     </div>
   </div>
   <!-- Quick-menu -->
-  <div class="quick-menu">
+  <div class="quick-menu is-hide">
     <button class="quick-menu-btn" type="button">
       <span href="#none">Quick - menu</span>
     </button>

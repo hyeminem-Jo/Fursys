@@ -144,7 +144,6 @@ section {
 }
 
 /* Title Animation ----------------------------------*/
-
 @keyframes intro-01 {
 	0% {
 		transform: translateY(-100%);

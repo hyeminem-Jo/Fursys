@@ -290,12 +290,10 @@ textarea:focus::placeholder {
 
 /* Footer ----------------------------------*/
 footer {
-  /* background-color: rgb(32, 33, 52); */
   background-color: rgba(128, 128, 128, 0.164);
 }
 
 .footer-box {
-  /* color: white; */
   overflow: hidden;
   width: 1100px;
   margin: 0 auto;
@@ -326,7 +324,6 @@ footer {
 }
 
 .footer-box .col span {
-  /* font-weight: 700; */
   color: orange;
 }
 

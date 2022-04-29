@@ -30,7 +30,6 @@ section {
 }
 
 /* Company heading ----------------------------------*/
-
 .company-heading {
 	overflow: hidden;
 	padding: 20px 0;
@@ -173,9 +172,7 @@ section {
 
 
 /* Company content Right ----------------------------------*/
-
 .company-content .right {
-	/* border: 1px solid; */
 	width: 76%;
 	float: right;
 	border-top: 3px solid #ddd;
@@ -214,7 +211,6 @@ section {
 }
 
 /* Company content Idea ----------------------------------*/
-
 .company-content .idea {
 	padding: 80px 0 90px;
 }
@@ -314,7 +310,6 @@ section {
 	width: 100%;
 	height: 100%;
 	bottom: 95px;
-	/* color: #ddd; */
 	color: white;
 	font-weight: 500;
 	font-size: 50px;
@@ -360,7 +355,6 @@ section {
 
 
 /* Company content Value ----------------------------------*/
-
 .company-content .value {
 	padding: 80px 0 100px;
 }
@@ -431,7 +425,6 @@ section {
 }
 
 /* Brand-story ----------------------------------*/
-
 .brand-story {
 	padding-bottom: 40px;
 }
@@ -558,7 +551,6 @@ section {
 }
 
 /* Stock ----------------------------------*/
-
 .stock {
 	text-align: center;
 	height: 800px;
@@ -626,6 +618,10 @@ td {
 	border-right: 1px solid rgba(186, 186, 186, 0.797);
 }
 
+.tab li:hover a {
+	color: gray;
+}
+
 .tab li.is-active a {
 	background-color: #fff;
 	color: black;
@@ -643,6 +639,7 @@ td {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	border-right: 1px solid gray;
 	background-color: #fff;
 	display: none;
 }
@@ -674,7 +671,6 @@ td {
 
 
 /* Animation ----------------------------------*/
-
 @keyframes slow-down {
 	100% {
 		transform: translateY(0);
@@ -683,7 +679,6 @@ td {
 }
 
 /* Footer ----------------------------------*/
-
 footer {
 	background-color: rgba(128, 128, 128, 0.164);
 }
@@ -719,7 +714,6 @@ footer {
 }
 
 .footer-box .col span {
-	/* font-weight: 700; */
 	color: orange;
 }
 

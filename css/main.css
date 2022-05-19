@@ -5,6 +5,10 @@ body {
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
+.is-hide {
+	display: none;
+}
+
 /* Container ----------------------------------*/
 .content {
 	position: relative;
@@ -555,6 +559,9 @@ main::before {
 	overflow: hidden;
 	display: inline-block;
 	margin-bottom: 20px;
+	/* border: 1px solid red; */
+	display: inline-flex;
+
 }
 
 .showroom-btn .btn:hover,
@@ -563,22 +570,35 @@ main::before {
 	color: white;
 }
 
-.showroom-btn .btn,
-.showroom-btn a {
-	float: left;
-	padding: 0 20px;
-	cursor: pointer;
-	padding: 5px 30px;
+.showroom-btn .btn {
 	border-right: 1px solid;
 }
 
-.showroom-btn .btn:nth-child(6) {
+.showroom-btn .btn,
+.showroom-btn .btn-all a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+	cursor: pointer;
+	padding: 5px 30px;
+}
+
+.showroom-btn li:last-child {
 	border: none;
 }
 
-.showroom-btn a {
+.showroom-btn .btn-all {
 	border: none;
 	box-sizing: border-box;
+}
+
+.showroom-btn .btn-all a {
+	font-weight: 500;
+}
+
+.showroom-btn .btn-all a:hover {
+	color: #aaa;
 }
 
 .showroom-btn>a:hover {
